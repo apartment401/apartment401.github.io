@@ -1,0 +1,42 @@
+body {
+    background-color: white;
+    color: black;
+}
+
+h1, h3, h5 {
+    text-align: center;
+}
+
+h6 {
+    font-size: 12px;
+}
+
+.brand-logo > img {
+    height: auto;
+    width: auto;
+    max-width: 47.5%;
+}
+
+#home > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+@media only screen and (max-width: 1200px) {
+    .brand-logo > img {
+        display: block;
+        margin: 0 auto;
+        padding-top: 2%;
+    }
+
+    #home-logo {
+        width:100%;
+    }
+
+    .parallax-container {
+        height: 250px;
+    }
+}
+
