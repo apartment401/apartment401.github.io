@@ -33,6 +33,19 @@
         </nav>
     </div>
 
+    <div class="preloader-background">
+        <div class="preloader">
+            <div style="color: #f6d860" class="la-pacman la-3x">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+
     
     <!--Navigation Bar on Mobile-->
     <ul class="sidenav" id="mobile-demo">
@@ -44,7 +57,9 @@
 
     <section class="container" id="home">
         <h3>Welcome to</h3>
-        <img src="assets/images/home-logo.png" class="hoverable" id="home-logo">   
+        <div style="width:100%;text-align:center;">
+            <a href="#about"><img src="assets/images/home-logo.png" class="pulse hoverable" id="home-logo"></a>
+        </div>
         <br>
         <br>     
     </section>
@@ -59,9 +74,9 @@
         <div class="row">
             <div class="col s12">
                 <ul class="tabs">
-                    <li class="tab col s4"><a class="active" href="#test1" type="panel">Team</a></li>
-                    <li class="tab col s4"><a href="#test2" type="panel">Mission</a></li>
-                    <li class="tab col s4"><a href="#test3" type="panel">Values</a></li>
+                    <li class="tab col s4"><a class="active white yellow-text text-darken-1" href="#test1" type="panel"><b>Team</b></a></li>
+                    <li class="tab col s4"><a class="white yellow-text text-darken-1" href="#test2" type="panel"><b>Mission</b></a></li>
+                    <li class="tab col s4"><a class="white yellow-text text-darken-1" href="#test3" type="panel"><b>Values</b></a></li>
                 </ul>
             </div>
             <div id="test1" class="col s12 m12">
@@ -149,9 +164,83 @@
             </div>
             <div id="test2" class="col s12">
                 <br>
+                <p>
+                    At Apartment 401, we ... orem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut metus diam. 
+                    Maecenas porttitor ut nulla et fermentum. 
+                    Nam dui nulla, tincidunt accumsan eros eget, gravida efficitur velit. 
+                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+                    Nulla maximus nunc ac condimentum placerat. 
+                    Nulla ac purus maximus, feugiat tortor quis, sagittis dolor. 
+                    Praesent interdum tristique nulla, et sollicitudin dolor euismod eget.
+                     Duis tincidunt, risus id vestibulum sollicitudin, nunc diam malesuada justo, id tempor purus risus et felis. Suspendisse quis semper urna. Integer venenatis imperdiet interdum. Nam venenatis, justo non ullamcorper aliquet, nisl velit congue tortor, non condimentum eros eros id lectus. Proin eros metus, pharetra at blandit sed, mattis vel orci.
+                    Aliquam condimentum pretium sapien in posuere.
+                    Nam pharetra magna non urna iaculis lobortis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec eu rhoncus ante. Curabitur malesuada mauris iaculis, ornare nisl sed, accumsan nunc. Praesent luctus tellus mauris, quis elementum eros pulvinar vitae. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras at pharetra mauris, eu lobortis odio.
+                    Proin sem quam, auctor sit amet enim id, aliquam porttitor nunc.
+                    Ut viverra ligula ac odio congue bibendum. Vivamus laoreet, turpis vitae congue maximus, arcu quam gravida magna, et molestie quam elit nec ligula. Quisque et convallis eros. In vitae tristique magna. Curabitur consectetur imperdiet porttitor. Sed accumsan tellus non nisl mollis, tristique luctus tortor feugiat. Morbi euismod, velit blandit imperdiet auctor, nisi leo sagittis ipsum, et mollis augue velit ac tortor.
+                    Nam vel viverra neque. 
+                    Suspendisse gravida malesuada nunc, malesuada consectetur arcu dapibus vel. Nulla facilisi. Curabitur faucibus pulvinar ex, non commodo neque egestas nec. Etiam mollis nunc in finibus pretium. Ut id finibus velit. 
+                    Mauris maximus ex a nunc pharetra vulputate. Ut porttitor sed metus ut fermentum.
+                </p>
+                                
             </div>
             <div id="test3" class="col s12">
                 <br>
+                <div class="row">
+                    <div class="col s12 m12 l12">
+                        <div class="card white">
+                            <div class="card-content black-text">
+                                <span class="card-title"><b><i class="material-icons left">face</i>Value 1</b></span>
+                                <p>
+                                    Aliquam condimentum pretium sapien in posuere.
+                                    Nam pharetra magna non urna iaculis lobortis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec eu rhoncus ante. Curabitur malesuada mauris iaculis, ornare nisl sed, accumsan nunc. Praesent luctus tellus mauris, quis elementum eros pulvinar vitae. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras at pharetra mauris, eu lobortis odio.
+                                    Proin sem quam, auctor sit amet enim id, aliquam porttitor nunc.
+                                    Ut viverra ligula ac odio congue bibendum. Vivamus laoreet, turpis vitae congue maximus, arcu quam gravida magna, et molestie quam elit nec ligula. Quisque et convallis eros. In vitae tristique magna. Curabitur consectetur imperdiet porttitor. Sed accumsan tellus non nisl mollis, tristique luctus tortor feugiat. Morbi euismod, velit blandit imperdiet auctor, nisi leo sagittis ipsum, et mollis augue velit ac tortor.
+                                    Nam vel viverra neque. 
+                                    Suspendisse gravida malesuada nunc, malesuada consectetur arcu dapibus vel. Nulla facilisi. Curabitur faucibus pulvinar ex, non commodo neque egestas nec. Etiam mollis nunc in finibus pretium. Ut id finibus velit. 
+                                    Mauris maximus ex a nunc pharetra vulputate. Ut porttitor sed metus ut fermentum.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col s12 m12 l12">
+                        <div class="card white">
+                            <div class="card-content black-text">
+                                <span class="card-title"><b><i class="material-icons left">face</i>Value 2</b></span>
+                                <p>
+                                    Aliquam condimentum pretium sapien in posuere.
+                                    Nam pharetra magna non urna iaculis lobortis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec eu rhoncus ante. Curabitur malesuada mauris iaculis, ornare nisl sed, accumsan nunc. Praesent luctus tellus mauris, quis elementum eros pulvinar vitae. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras at pharetra mauris, eu lobortis odio.
+                                    Proin sem quam, auctor sit amet enim id, aliquam porttitor nunc.
+                                    Ut viverra ligula ac odio congue bibendum. Vivamus laoreet, turpis vitae congue maximus, arcu quam gravida magna, et molestie quam elit nec ligula. Quisque et convallis eros. In vitae tristique magna. Curabitur consectetur imperdiet porttitor. Sed accumsan tellus non nisl mollis, tristique luctus tortor feugiat. Morbi euismod, velit blandit imperdiet auctor, nisi leo sagittis ipsum, et mollis augue velit ac tortor.
+                                    Nam vel viverra neque. 
+                                    Suspendisse gravida malesuada nunc, malesuada consectetur arcu dapibus vel. Nulla facilisi. Curabitur faucibus pulvinar ex, non commodo neque egestas nec. Etiam mollis nunc in finibus pretium. Ut id finibus velit. 
+                                    Mauris maximus ex a nunc pharetra vulputate. Ut porttitor sed metus ut fermentum.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col s12 m12 l12">
+                        <div class="card white">
+                            <div class="card-content black-text">
+                                <span class="card-title"><b><i class="material-icons left">face</i>Value 3</b></span>
+                                <p>
+                                    Aliquam condimentum pretium sapien in posuere.
+                                    Nam pharetra magna non urna iaculis lobortis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec eu rhoncus ante. Curabitur malesuada mauris iaculis, ornare nisl sed, accumsan nunc. Praesent luctus tellus mauris, quis elementum eros pulvinar vitae. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras at pharetra mauris, eu lobortis odio.
+                                    Proin sem quam, auctor sit amet enim id, aliquam porttitor nunc.
+                                    Ut viverra ligula ac odio congue bibendum. Vivamus laoreet, turpis vitae congue maximus, arcu quam gravida magna, et molestie quam elit nec ligula. Quisque et convallis eros. In vitae tristique magna. Curabitur consectetur imperdiet porttitor. Sed accumsan tellus non nisl mollis, tristique luctus tortor feugiat. Morbi euismod, velit blandit imperdiet auctor, nisi leo sagittis ipsum, et mollis augue velit ac tortor.
+                                    Nam vel viverra neque. 
+                                    Suspendisse gravida malesuada nunc, malesuada consectetur arcu dapibus vel. Nulla facilisi. Curabitur faucibus pulvinar ex, non commodo neque egestas nec. Etiam mollis nunc in finibus pretium. Ut id finibus velit. 
+                                    Mauris maximus ex a nunc pharetra vulputate. Ut porttitor sed metus ut fermentum.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
              
@@ -269,8 +358,8 @@
         <div class="container">
             <div class="row">
             <div class="col l6 s12">
-                <h4 class="grey-text text-darken-2">Thank you!</h4>
-                <p class="grey-text text-darken-4">Let us know if you have any questions.</p>
+                <h4 class="grey-text text-darken-2">Questions?</h4>
+                <p class="grey-text text-darken-4">Let us know by reaching out to us!</p>
             </div>
             <div class="col l4 offset-l2 s12">
                 <h4 class="grey-text text-darken-2">Links</h4>

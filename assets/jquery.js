@@ -1,4 +1,6 @@
 $(document).ready(function(){
+    $('.preloader').delay(1500).fadeOut('fast');
+    $('.preloader-background').delay(2000).fadeOut('slow');
     $('.sidenav').sidenav();
     $('.parallax').parallax();
     $('.tabs').tabs();
