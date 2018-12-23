@@ -24,6 +24,10 @@ h6 {
     width: 50%;
 }
 
+.parallax-container {
+    height: 650px;
+}
+
 @media only screen and (max-width: 1200px) {
     .brand-logo > img {
         display: block;
@@ -36,7 +40,7 @@ h6 {
     }
 
     .parallax-container {
-        height: 250px;
+        height: 200px;
     }
 }
 
