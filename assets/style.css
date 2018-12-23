@@ -44,8 +44,8 @@ h6 {
     }
 }
 
-body {
-    cursor: url("/assets/images/cursor.png"), auto;
+html, body {
+    cursor: url("images/cursor.png"), auto;
 }
 
 .typewriter h1 {
