@@ -1,12 +1,17 @@
 $(document).ready(function(){
+    setTimeout(function() { 
+        $(window).scrollTop(0); 
+    }, 150);
     $('.sidenav').sidenav();
     $('.parallax').parallax();
     $('.tabs').tabs();
     // Add smooth scrolling to all links
     $("a").on('click', function(event) {
-
+        if (this.hash === "" || this.hash === "#test1" || this.hash === "#test2" || this.hash === "#test3" ) {
+            event.preventDefault();
+        }
         // Make sure this.hash has a value before overriding default behavior
-        if (this.hash !== "") {
+        else {
             // Prevent default anchor click behavior
             event.preventDefault();
     

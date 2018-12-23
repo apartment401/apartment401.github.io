@@ -17,16 +17,10 @@ h6 {
     max-width: 47.5%;
 }
 
-#home > img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+.tabs .indicator{
+    background-color:#ffde59;
 }
 
-.parallax-container {
-    height: 650px;
-}
 
 @media only screen and (max-width: 1200px) {
     .brand-logo > img {
