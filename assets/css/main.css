@@ -1,5 +1,5 @@
 html, body {
-    cursor: url("images/cursor.png"), auto;
+    cursor: url("../images/cursor.png"), auto;
 }
 
 body {
@@ -16,12 +16,12 @@ h6 {
 }
 
 #home-logo {
-    background-image: url('images/home-logo.png');
+    background-image: url('../images/home-logo.png');
  }
  
- #home-logo:hover {
-    background-image: url('images/home-logo-2.png');
- }
+#home-logo:hover {
+    background-image: url('../images/home-logo-2.png');
+}
 
 .typewriter h1 {
     color: black;
