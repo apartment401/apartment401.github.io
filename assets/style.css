@@ -15,6 +15,14 @@ h6 {
     font-size: 12px;
 }
 
+#home-logo {
+    background-image: url('images/home-logo.png');
+ }
+ 
+ #home-logo:hover {
+    background-image: url('images/home-logo-2.png');
+ }
+
 .typewriter h1 {
     color: black;
     font-family: monospace;
