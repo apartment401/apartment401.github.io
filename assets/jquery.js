@@ -1,7 +1,4 @@
 $(document).ready(function(){
-    setTimeout(function() { 
-        $(window).scrollTop(0); 
-    }, 150);
     $('.preloader').delay(1500).fadeOut('fast');
     $('.preloader-background').delay(2000).fadeOut('slow');
     $('.sidenav').sidenav();
