@@ -6,12 +6,12 @@ $(document).ready(function(){
     $('.parallax').parallax();
     $('.tabs').tabs();
     // Add smooth scrolling to all links
-    $("a").on('click', function(event) {
-        if (this.hash === "" || this.hash === "#test1" || this.hash === "#test2" || this.hash === "#test3" ) {
-            event.preventDefault();
-        }
+    $('a')
+    .not('[type="panel"]')
+    .on('click', function(event) {
+
         // Make sure this.hash has a value before overriding default behavior
-        else {
+        if (this.hash !== "") {
             // Prevent default anchor click behavior
             event.preventDefault();
     
