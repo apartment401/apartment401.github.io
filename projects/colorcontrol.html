@@ -64,6 +64,20 @@
             <br>
         </section>
 
+        <section class="container">
+            <div class="slider">
+                <ul class="slides">
+                    <li>
+                        <img src="../assets/images/colorcontrolelectrical.jpg"> <!-- random image -->
+                    </li>
+                    <li>
+                        <img src="../assets/images/colorcontrol.jpg"> <!-- random image -->
+                    </li>
+                </ul>
+            </div>
+        <br>
+        </section>
+
         <section class="container" id="description">
             
             <div class="row">
@@ -96,8 +110,7 @@
                 </div>
             </div>
 
-
-
+        
             <div class="row">
                 <div class="col s12 m12">
                     <div class="card hoverable">
@@ -168,7 +181,7 @@
 
                                 One of the problems we ran into with keeping our Raspberry Pi on all the time as a server, is that the Raspberry Pi would become unresponsive to server requests after about a day. By replacing our WiFi dongle we were using with an Ethernet cable, this problem was resolved.
                                 To come full circle to what inspired us to do the project in the first place, we wanted to implement sound mode. Currently, this mode responds to sound that the RPi picks up through a microphone, and outputs a corresponding brightness of white light according to volume. We are in the process of working with an electret microphone and high/low/band pass filters in order to separate the sound we hear into bass, treble/alto/soprano, and presence/sparkle signals. These signals would correspond to R, G, and B colors in sound mode.
-                                Note: We tested processing the signal from the electret microphone directly. We used the Discrete Fourier Transform in order to identify frequencies in our sound. However, it seems that the Raspberry Pi cannot sample analog (using the SPI bus and an MCP3008) at a high enough frequency in order to get reliable frequency identification.
+                                Note: We tested processing the signal from the electret microphone directly. We used the <b>Discrete Fourier Transform</b> in order to identify frequencies in our sound. However, it seems that the Raspberry Pi cannot sample analog (using the SPI bus and an MCP3008) at a high enough frequency in order to get reliable frequency identification.
                                 
                         </div>
                         <div class="card-action"></div>
