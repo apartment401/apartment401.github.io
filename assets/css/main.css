@@ -15,6 +15,10 @@ h6 {
     font-size: 12px;
 }
 
+blockquote {
+    border-left: 5px solid black;
+}
+
 #home-logo {
     background-image: url('../images/home-logo.png');
  }
@@ -23,18 +27,28 @@ h6 {
     background-image: url('../images/home-logo-2.png');
 }
 
-.typewriter h1 {
+.brand-logo > img {
+    height: auto;
+    width: auto;
+    max-width: 47.5%;
+}
+
+.tabs .indicator{
+    background-color:#ffde59;
+}
+
+
+.typewriter h3 {
     color: black;
     font-family: monospace;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: .15em solid orange; /* The typewriter cursor */
-    /* white-space: nowrap; Keeps the content on a single line */
+    white-space: nowrap; /* Keeps the content on a single line */
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .05em; /* Adjust as needed */
-    font-size: 5em;
-    animation:
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
       typing 2s steps(30, end),
-      blink-caret .5s step-end;
+      blink-caret 1s step-end infinite;
   }
   
   /* The typing effect */
@@ -49,15 +63,6 @@ h6 {
     50% { border-color: orange }
   }
 
-.brand-logo > img {
-    height: auto;
-    width: auto;
-    max-width: 47.5%;
-}
-
-.tabs .indicator{
-    background-color:#ffde59;
-}
 
 
 .preloader-background {
@@ -343,6 +348,7 @@ h6 {
                 transform: translateY(-50%);
     }
 }
+
 @-moz-keyframes pacman-balls {
     0% {
         left: 200%;
@@ -429,28 +435,3 @@ h6 {
         height: 200px;
     }
 }
-
-.typewriter h1 {
-    color: black;
-    font-family: monospace;
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid orange; /* The typewriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em; /* Adjust as needed */
-    animation: 
-      typing 2s steps(30, end),
-      blink-caret 1s step-end infinite;
-  }
-  
-  /* The typing effect */
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
-  
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: orange }
-  }
