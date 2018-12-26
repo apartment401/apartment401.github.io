@@ -136,7 +136,12 @@
                                 These commands were processed using Flask, and correspondingly output <b>pulse width modulation (PWM)</b> to GPIO pins 23, 24, and 25 respectively for R, G, and B. 
                                 Our back-end first used the GPIO.PWM module in order to output PWM to these pins.
                                 Our LED lights, like most, used a 12V pin and powered R, G, and B by grounding those pins. Our electrical schematic for controlling the lights was this:
-                                We implemented colors instead of RGB values. 
+
+
+                                <img src="../assets/images/colorcontrolelectrical.jpg" class="responsive-img">
+
+
+                                We also implemented colors instead of RGB values. 
                             
                                 <blockquote>
     
@@ -165,23 +170,40 @@
                                 <br>
 
                                 
-                                Our final goal was to implement more features, such as flashing, breathing, and alternating between multiple colors. In attempting to make the lights flash, we attempted to use different libraries in the hopes that they would have a built-in on-off function that used PWM when on. However, after scouring many libraries, it seemed that there was no such functionality that would also extend to breathing and alternating colors.
-                                We ended up using pigpio to control our lights. It was slightly bothersome to have to run 'sudo pigpiod' before running the Python program, but we automated this by adding this command to the boot file for the RPi.
-                                We tried a different method for flashing - running another Python program in parallel which would do the loop work: a while loop that output PWM and down time as specified. In the main Python script, we would find the process of the other program and kill it in order to break its while loop and regain control of the pins. This method worked! In order to find the side Python program's PID, we searched for a PPID of 1 and a program name of 'python3', which is the only possible program that the side program could be (as the side program would be started within the python3 program running as root).
-                        
+                                Our final goal was to implement more features, such as flashing, breathing, and alternating between multiple colors. 
+                                In attempting to make the lights flash, we attempted to use different libraries in the hopes that they would have a built-in on-off function that used PWM when on. 
+                                However, after scouring many libraries, it seemed that there was no such functionality that would also extend to breathing and alternating colors.
+                                We ended up using pigpio to control our lights. We had to run 'sudo pigpiod' each time we restarted the RPi, but we automated this by adding this command to the boot file for the RPi.
                                 
                                 <br>
                                 <br>
+                                
 
-                                Note: without killing the other program, we found, two conflicting commands to the lights seemed to occur simultaneously, which was not desired.
-                                From there, it was straightforward to implement flashing, breathing (increasing and decreasing the brightness according to a sine wave or another waveform), and alternating the lights between different colors with the setting of flashing, breathing, and directly changing from one color to the next. We also gave the user control of high time and low time for all of these functions, where applicable.
+                                Unable to find a built in way to solve our problem, we tried a different method for flashing - running another Python program in parallel which would do the loop work: a while loop that output PWM and down time as specified. 
+                                In the main Python script, we would find the process of the other program and kill it in order to break its while loop and regain control of the pins. This method worked! 
+                                In order to find the side Python program's PID, we searched for a PPID of 1 and a program name of 'python3', which is the only possible program that the side program could be 
+                                (as the side program would be started within the python3 program running as root). From there, it was straightforward to implement flashing, breathing (increasing and decreasing the brightness according to a sine wave or another waveform), 
+                                and alternating the lights between different colors with the setting of flashing, breathing, and directly changing from one color to the next. We also gave the user control of high time and low time for all of these functions, where applicable.
+                                (Note: without killing the other program, we found, two conflicting commands to the lights seemed to occur simultaneously, which was not desired.)
+                                
                             
                                 <br>
                                 <br>
 
-                                One of the problems we ran into with keeping our Raspberry Pi on all the time as a server, is that the Raspberry Pi would become unresponsive to server requests after about a day. By replacing our WiFi dongle we were using with an Ethernet cable, this problem was resolved.
-                                To come full circle to what inspired us to do the project in the first place, we wanted to implement sound mode. Currently, this mode responds to sound that the RPi picks up through a microphone, and outputs a corresponding brightness of white light according to volume. We are in the process of working with an electret microphone and high/low/band pass filters in order to separate the sound we hear into bass, treble/alto/soprano, and presence/sparkle signals. These signals would correspond to R, G, and B colors in sound mode.
-                                Note: We tested processing the signal from the electret microphone directly. We used the <b>Discrete Fourier Transform</b> in order to identify frequencies in our sound. However, it seems that the Raspberry Pi cannot sample analog (using the SPI bus and an MCP3008) at a high enough frequency in order to get reliable frequency identification.
+                                One of the problems we ran into with keeping our Raspberry Pi on all the time as a server, is that the Raspberry Pi would become unresponsive to server requests after about a day. 
+                                By replacing our WiFi dongle we were using with an Ethernet cable, this problem was resolved.
+                                
+                                <br>
+                                <br>
+                                
+                                To come full circle to what inspired us to do the project in the first place, we wanted to implement <i>sound mode</i>. 
+                                Currently, this mode responds to sound that the RPi picks up through a microphone, and outputs a corresponding brightness of white light according to volume. 
+                                We are in the process of working with an electret microphone and high/low/band pass filters in order to separate the sound we hear into bass, treble/alto/soprano, and presence/sparkle signals. 
+                                These signals would correspond to R, G, and B colors in sound mode.
+                                Note: We tested processing the signal from the electret microphone directly. 
+                                We used the <b>Discrete Fourier Transform</b> in order to identify frequencies in our sound. 
+                                However, it seems that our Raspberry Pi cannot sample analog (using the SPI bus and an MCP3008) at a stable frequency in order to get reliable frequency identification. 
+                                With physical filters, we can measure power of the signal instead, which only requires high sampling rate and not a stable one.
                                 
                         </div>
                         <div class="card-action"></div>
