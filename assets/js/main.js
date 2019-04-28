@@ -4,6 +4,7 @@ $(document).ready(function(){
     $('.sidenav').sidenav();
     $('.parallax').parallax();
     $('.tabs').tabs();
+    $('.slider').slider({'height': 500});
     // Add smooth scrolling to all links
     $('a')
     .not('[type="panel"]')

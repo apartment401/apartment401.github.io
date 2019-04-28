@@ -1,13 +1,13 @@
-html, body {
+/* html, body {
     cursor: url("../images/cursor.png"), auto;
-}
+} */
 
 body {
     background-color: white;
     color: black;
 }
 
-h1, h3, h5 {
+h1, h2, h3, h5 {
     text-align: center;
 }
 
@@ -20,7 +20,11 @@ blockquote {
 }
 
 .slider .indicators .indicator-item.active {
-    background-color: #ffde59;
+    background-color: #03a9f4;
+}
+
+.header-space {
+    margin-top: 2%;
 }
 
 #home-logo {
@@ -35,11 +39,6 @@ blockquote {
     margin-top: 5px;
     max-width: 20%;
 }
-
-.tabs .indicator{
-    background-color:#ffde59;
-}
-
 
 .typewriter h3 {
     color: black;
@@ -63,7 +62,7 @@ blockquote {
   /* The typewriter cursor effect */
   @keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: orange }
+    50% { border-color: #03a9f4 }
   }
 
 
@@ -428,8 +427,8 @@ blockquote {
         display: block;
         margin:  auto;
         margin-top: 10%;
-        height: 100%;
-        width: 100%
+        height: 33px;
+        width: 72px;
     }
 
     #home-logo {
