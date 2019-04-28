@@ -32,9 +32,8 @@ blockquote {
 }
 
 .brand-logo > img {
-    height: auto;
-    width: auto;
-    max-width: 47.5%;
+    margin-top: 5px;
+    max-width: 20%;
 }
 
 .tabs .indicator{
@@ -79,7 +78,7 @@ blockquote {
 	top: 0;
 	left: 0;
 	right: 0;
-  bottom: 0;
+    bottom: 0;
 }
 .preloader {
   margin: 0 auto;
@@ -427,8 +426,10 @@ blockquote {
 @media only screen and (max-width: 1200px) {
     .brand-logo > img {
         display: block;
-        margin: 0 auto;
-        padding-top: 2%;
+        margin:  auto;
+        margin-top: 10%;
+        height: 100%;
+        width: 100%
     }
 
     #home-logo {
