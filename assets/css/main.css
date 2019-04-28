@@ -36,7 +36,7 @@ blockquote {
 }
 
 .brand-logo > img {
-    margin-top: 5px;
+    margin-top: 1%;
     max-width: 20%;
 }
 
@@ -51,21 +51,19 @@ blockquote {
     animation: 
       typing 2s steps(30, end),
       blink-caret 1s step-end infinite;
-  }
-  
-  /* The typing effect */
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
-  
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: #03a9f4 }
-  }
+}
 
+/* The typing effect */
+@keyframes typing {
+from { width: 0 }
+to { width: 100% }
+}
 
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+from, to { border-color: transparent }
+50% { border-color: #03a9f4 }
+}
 
 .preloader-background {
 	display: flex;
@@ -426,9 +424,7 @@ blockquote {
     .brand-logo > img {
         display: block;
         margin:  auto;
-        margin-top: 10%;
-        height: 33px;
-        width: 72px;
+        padding-top: 10%;
     }
 
     #home-logo {
