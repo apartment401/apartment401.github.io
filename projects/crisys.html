@@ -16,85 +16,47 @@
 
     <body>
       
-        <!--Navigation Bar on Desktop-->
+    <!--Navigation Bar on Desktop-->
     <div class="navbar-fixed">
         <nav>
             <div class="nav-wrapper white">
                 <div class="container">
-                    <a href="../index.html" class="brand-logo"><img src="../assets/images/navbar-logo.png"></a>
+                    <a href="../index.html" class="brand-logo">
+                        <div style="height:5px"></div>
+                        <div style="height:50px">
+                            <img src="../assets/images/navbar-logo.png" style="max-width:100%; max-height:100%;">
+                        </div>
+                    </a>
                     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons black-text">menu</i></a>
-                    <ul class="right hide-on-med-and-down">
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
                         <li><a class="black-text" href="../index.html">Home</a></li>
                         <li><a class="black-text" href="../about.html">About</a></li>
                         <li><a class="black-text" href="../projects.html">Projects</a></li>
                     </ul>
                 </div>
             </div>
-        </div>
+        </nav>
+    </div>
 
-        <!--Navigation Bar on Desktop-->
-        <div class="navbar-fixed">
-            <nav>
-                <div class="nav-wrapper white">
-                    <div class="container">
-                        <a href="../" class="brand-logo"><img src="../assets/images/clear-navbar-logo.png"></a>
-                        <a href="../#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons black-text">menu</i></a>
-                        <ul class="right hide-on-med-and-down">
-                            <li><a class="black-text" href="../">Home</a></li>
-                            <li><a class="black-text" href="../#about">About</a></li>
-                            <li><a class="black-text" href="../#skills">Skills</a></li>
-                            <li><a class="black-text" href="../#portfolio">Portfolio</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
+    <!--Navigation Bar on Mobile-->
+    <ul class="sidenav" id="mobile-demo">
+        <li><a class="black-text sidenav-close" href="../index.html">Home</a></li>
+        <li><a class="black-text sidenav-close" href="../about.html">About</a></li>
+        <li><a class="black-text sidenav-close" href="../projects.html">Projects</a></li>
+    </ul>
 
-        <!--Navigation Bar on Mobile-->
-        <ul class="sidenav" id="mobile-demo" >
-            <li><a class="black-text sidenav-close" href="../">Home</a></li>
-            <li><a class="black-text sidenav-close" href="../#about">About</a></li>
-            <li><a class="black-text sidenav-close" href="../#skills">Skills</a></li>
-            <li><a class="black-text sidenav-close" href="../#portfolio">Portfolio</a></li>
-        </ul>
-
-
-        <section class="container" id="title">
-            <br>
-            <div class="typewriter">
-                <h3>Color Control</h3>
-            </div>
-            <br>
-        </section>
-
-        <section class="container">
-            <div class="slider">
-                <ul class="slides">
-                    <li>
-                        <img src="../assets/images/colorcontrol.jpg"> <!-- random image -->
-                    </li>
-                    <li>
-                        <img src="../assets/images/colorcontrolelectrical.jpg"> <!-- random image -->
-                    </li>
-                </ul>
-            </div>
+    <section class="container" id="title">
         <br>
-        </section>
-
-    <section class="container">
-        <div class="slider">
-            <ul class="slides">
-                <li>
-                    <img src="../assets/images/colorcontrol.jpg"> <!-- random image -->
-                </li>
-                <li>
-                    <img src="../assets/images/colorcontrolelectrical.jpg"> <!-- random image -->
-                </li>
-            </ul>
+        <div class="typewriter">
+            <h3>criSys</h3>
         </div>
-    <br>
+        <br>
     </section>
-    
+
+    <!-- <section class="container">
+        <iframe style="border: none;" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FTzZdAYzylT4uBw2k1UINGf%2FCriSys-Public%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
+    </section> -->
+
     <section class="container" id="description">
         <div class="row">
             <div class="col s12 m12">
@@ -126,12 +88,16 @@
                 <div class="card">
                     <div class="card-content">
                         <span class="card-title"><b><i class="fas fa-lightbulb left"></i>Solution</b></span>
-                        <p class="black-tex"t>
+                        <p class="black-text">
                             Explanation of the project.
                             <br>
                             <a href="http://crisys.mybluemix.net/" target="_blank">Link to demo website</a>
                             <br>
-                            <iframe style="border: none;" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FTzZdAYzylT4uBw2k1UINGf%2FCriSys-Public%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         
             <div class="row">
@@ -144,8 +110,7 @@
                                 <br>
                                 <a href="http://crisys.mybluemix.net/" target="_blank">Link to demo website</a>
                                 <br>
-                                <iframe style="border: none;" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FTzZdAYzylT4uBw2k1UINGf%2FCriSys-Public%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
-
+                                <!-- <iframe style="border: none;" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FTzZdAYzylT4uBw2k1UINGf%2FCriSys-Public%3Fnode-id%3D0%253A1" allowfullscreen></iframe> -->
                         </div>
                         <div class="card-action"></div>
                     </div>
