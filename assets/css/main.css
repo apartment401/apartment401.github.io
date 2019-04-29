@@ -434,4 +434,12 @@ from, to { border-color: transparent }
     .parallax-container {
         height: 200px;
     }
+
+    .contact-info {
+        float: left !important;
+    }
+
+    .header-space {
+        margin-top: 5%;
+    }
 }
