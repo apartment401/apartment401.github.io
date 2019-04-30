@@ -15,14 +15,19 @@
     </head>
     <body>
       
-        <!--Navigation Bar on Desktop-->
+    <!--Navigation Bar on Desktop-->
     <div class="navbar-fixed">
         <nav>
             <div class="nav-wrapper white">
                 <div class="container">
-                    <a href="../index.html" class="brand-logo"><img src="../assets/images/navbar-logo.png"></a>
+                    <a href="../index.html" class="brand-logo">
+                        <div style="height:5px"></div>
+                        <div style="height:50px">
+                            <img src="../assets/images/navbar-logo.png" style="max-width:100%; max-height:100%;">
+                        </div>
+                    </a>
                     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons black-text">menu</i></a>
-                    <ul class="right hide-on-med-and-down">
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
                         <li><a class="black-text" href="../index.html">Home</a></li>
                         <li><a class="black-text" href="../about.html">About</a></li>
                         <li><a class="black-text" href="../projects.html">Projects</a></li>
@@ -36,7 +41,7 @@
     <ul class="sidenav" id="mobile-demo">
         <li><a class="black-text sidenav-close" href="../index.html">Home</a></li>
         <li><a class="black-text sidenav-close" href="../about.html">About</a></li>
-        <li class="active"><a class="black-text sidenav-close" href="../projects.html">Projects</a></li>
+        <li><a class="black-text sidenav-close" href="../projects.html">Projects</a></li>
     </ul>
 
     <div class="preloader-background">
@@ -53,166 +58,163 @@
     </div>
 
 
-        <section class="container" id="title">
-            <br>
-            <div class="typewriter">
-                <h3>Color Control</h3>
-            </div>
-            <br>
-        </section>
+    <section class="container">
+        <h2>Color Control</h2>
+    </section>
 
-        <section class="container">
-            <div class="slider">
-                <ul class="slides">
-                    <li>
-                        <img src="../assets/images/colorcontrol.jpg"> <!-- random image -->
-                    </li>
-                    <li>
-                        <img src="../assets/images/colorcontrolelectrical.jpg"> <!-- random image -->
-                    </li>
-                </ul>
-            </div>
-        <br>
-        </section>
+    <section class="container">
+        <div class="slider">
+            <ul class="slides">
+                <li>
+                    <img src="../assets/images/colorcontrol.jpg"> <!-- random image -->
+                </li>
+                <li>
+                    <img src="../assets/images/colorcontrolelectrical.jpg"> <!-- random image -->
+                </li>
+            </ul>
+        </div>
+    <br>
+    </section>
 
-        <section class="container" id="description">
-            
-            <div class="row">
-                <div class="col s12 m12">
-                    <div class="card">
-                        <div class="card-content">
-                            <span class="card-title"><b><i class="fas fa-info-circle left"></i>Overview</b></span>
-                            <p class="black-text">
-                                The idea for Color Control came from an online video where the creator flashed an LED light strip based on the sound of music. 
-                                Apartment 401 decided to use an RGB LED light, Raspberry Pi, electronic parts, and a Google Home Mini to achieve a more broad purpose. We completed this project during Berkeley's Cal Hacks 5.0. 
-                                Unfortunately, we did not submit because the project could not be transported to the judging location.
-                            </p>
-                        </div>
+    <section class="container">
+        <div class="row">
+            <div class="col s12 m12">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title"><b><i class="fas fa-info-circle left"></i>Overview</b></span>
+                        <p class="black-text">
+                            The idea for Color Control came from an online video where the creator flashed an LED light strip based on the sound of music. 
+                            Apartment 401 decided to use an RGB LED light, Raspberry Pi, electronic parts, and a Google Home Mini to achieve a more broad purpose. We completed this project during Berkeley's Cal Hacks 5.0. 
+                            Unfortunately, we did not submit because the project could not be transported to the judging location.
+                        </p>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="row">
-                <div class="col s12 m12">
-                    <div class="card">
-                        <div class="card-content">
-                            <span class="card-title"><b><i class="fas fa-trophy left"></i>Goal</b></span>
-                            <p class="black-text">
-                                Apartment 401 wanted to control an LED light strip with plenty of options using a Flask web application and Google Home.
-                            </p>
-                        </div>
+        <div class="row">
+            <div class="col s12 m12">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title"><b><i class="fas fa-trophy left"></i>Goal</b></span>
+                        <p class="black-text">
+                            Apartment 401 wanted to control an LED light strip with plenty of options using a Flask web application and Google Home.
+                        </p>
                     </div>
                 </div>
             </div>
+        </div>
 
-        
-            <div class="row">
-                <div class="col s12 m12">
-                    <div class="card">
-                        <div class="card-content">
-                            <span class="card-title"><b><i class="fas fa-lightbulb left"></i>Solution</b></span>
-                            <p class="black-tex"t>
-                                In order to control the LED lights, we decided to use a Raspberry Pi (Model 2 B+) for ease of programming. 
-                                We used the RPi to create a web server, using Flask with Python for our server back-end. 
-                                For controlling using Google Home, we used IFTTT's Webhooks service to generate GET requests for our website.
-                                Our website controller would to use AJAX POST requests upon the selection of buttons to create an interactive, 'clicky', website, which would allow for animation without refreshing the page.
-                                We started with a simple Flask server that would handle GET requests. A form that allowed 0-255 R, G, and B input respectively used a submit button to update the page to the same website but with additional HTML paths. 
-                                
-                                <blockquote>
-                                    For example:
-                                    <br>
-                                    - /on/#R/#G/#B
-                                    <br>
-                                    - /off
-                                    <br>
-                                </blockquote>
-
-                            
-                                These commands were processed using Flask, and correspondingly output <b>pulse width modulation (PWM)</b> to GPIO pins 23, 24, and 25 respectively for R, G, and B. 
-                                Our back-end first used the GPIO.PWM module in order to output PWM to these pins.
-                                Our LED lights, like most, used a 12V pin and powered R, G, and B by grounding those pins. Our electrical schematic for controlling the lights was this:
-
-
-                                <img src="../assets/images/colorcontrolelectrical.jpg" class="responsive-img">
-
-
-                                We also implemented colors instead of RGB values. 
-                            
-                                <blockquote>
     
-                                    The HTML path would now be, for example:
-                                    <br>
-                                    - /on/green
-                                </blockquote>
-
-                                
-                                However, the lights looked really off for colors such as orange, where the lights looked nearly white. We balanced the lights by tuning a multiplier for each of R, G, B, such that all colors's RGB values would be multiplied by the proper multiplier.
-                                We added the following colors: red, orange, yellow, green, blue, purple, white, aqua.
-                                
-
-                                <br>
-                                <br>
-                                
-                                Our lights now could turn on any of the colors that we had specified. 
-                                We could ask our Google Home Mini to "Turn the lights red", 
-                                where 'turn the lights' represented a trigger for the following color keyword ('red'), 
-                                which IFTTT would process into Our.IP:5000/on/red. We implemented port forwarding on our router,
-                                 to the Raspberry Pi, in order to control our lights from the internet. The Raspberry Pi would process this GET request, 
-                                and turn on the proper combination of R, G, and B multiplied by a value.
-                               
-                           
-                                <br>
-                                <br>
-
-                                
-                                Our final goal was to implement more features, such as flashing, breathing, and alternating between multiple colors. 
-                                In attempting to make the lights flash, we attempted to use different libraries in the hopes that they would have a built-in on-off function that used PWM when on. 
-                                However, after scouring many libraries, it seemed that there was no such functionality that would also extend to breathing and alternating colors.
-                                We ended up using pigpio to control our lights. We had to run 'sudo pigpiod' each time we restarted the RPi, but we automated this by adding this command to the boot file for the RPi.
-                                
-                                <br>
-                                <br>
-                                
-
-                                Unable to find a built in way to solve our problem, we tried a different method for flashing - running another Python program in parallel which would do the loop work: a while loop that output PWM and down time as specified. 
-                                In the main Python script, we would find the process of the other program and kill it in order to break its while loop and regain control of the pins. This method worked! 
-                                In order to find the side Python program's PID, we searched for a PPID of 1 and a program name of 'python3', which is the only possible program that the side program could be 
-                                (as the side program would be started within the python3 program running as root). From there, it was straightforward to implement flashing, breathing (increasing and decreasing the brightness according to a sine wave or another waveform), 
-                                and alternating the lights between different colors with the setting of flashing, breathing, and directly changing from one color to the next. We also gave the user control of high time and low time for all of these functions, where applicable.
-                                (Note: without killing the other program, we found, two conflicting commands to the lights seemed to occur simultaneously, which was not desired.)
-                                
+        <div class="row">
+            <div class="col s12 m12">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title"><b><i class="fas fa-lightbulb left"></i>Solution</b></span>
+                        <p class="black-tex"t>
+                            In order to control the LED lights, we decided to use a Raspberry Pi (Model 2 B+) for ease of programming. 
+                            We used the RPi to create a web server, using Flask with Python for our server back-end. 
+                            For controlling using Google Home, we used IFTTT's Webhooks service to generate GET requests for our website.
+                            Our website controller would to use AJAX POST requests upon the selection of buttons to create an interactive, 'clicky', website, which would allow for animation without refreshing the page.
+                            We started with a simple Flask server that would handle GET requests. A form that allowed 0-255 R, G, and B input respectively used a submit button to update the page to the same website but with additional HTML paths. 
                             
+                            <blockquote>
+                                For example:
                                 <br>
+                                - /on/#R/#G/#B
                                 <br>
+                                - /off
+                                <br>
+                            </blockquote>
 
-                                One of the problems we ran into with keeping our Raspberry Pi on all the time as a server, is that the Raspberry Pi would become unresponsive to server requests after about a day. 
-                                By replacing our WiFi dongle we were using with an Ethernet cable, this problem was resolved.
-                                
+                        
+                            These commands were processed using Flask, and correspondingly output <b>pulse width modulation (PWM)</b> to GPIO pins 23, 24, and 25 respectively for R, G, and B. 
+                            Our back-end first used the GPIO.PWM module in order to output PWM to these pins.
+                            Our LED lights, like most, used a 12V pin and powered R, G, and B by grounding those pins. Our electrical schematic for controlling the lights was this:
+
+
+                            <img src="../assets/images/colorcontrolelectrical.jpg" class="responsive-img">
+
+
+                            We also implemented colors instead of RGB values. 
+                        
+                            <blockquote>
+
+                                The HTML path would now be, for example:
                                 <br>
-                                <br>
-                                
-                                To come full circle to what inspired us to do the project in the first place, we wanted to implement <i>sound mode</i>. 
-                                Currently, this mode responds to sound that the RPi picks up through a microphone, and outputs a corresponding brightness of white light according to volume. 
-                                We are in the process of working with an electret microphone and high/low/band pass filters in order to separate the sound we hear into bass, treble/alto/soprano, and presence/sparkle signals. 
-                                These signals would correspond to R, G, and B colors in sound mode.
-                                Note: We tested processing the signal from the electret microphone directly. 
-                                We used <b>Discrete Fourier Transform</b> in order to identify frequencies in our sound. 
-                                However, it seems that our Raspberry Pi cannot sample analog (using the SPI bus and an MCP3008) at a stable frequency in order to get reliable frequency identification. 
-                                With physical filters, we can measure power of the signal instead, which only requires high sampling rate and not a stable one.
-                                
-                        </div>
+                                - /on/green
+                            </blockquote>
+
+                            
+                            However, the lights looked really off for colors such as orange, where the lights looked nearly white. We balanced the lights by tuning a multiplier for each of R, G, B, such that all colors's RGB values would be multiplied by the proper multiplier.
+                            We added the following colors: red, orange, yellow, green, blue, purple, white, aqua.
+                            
+
+                            <br>
+                            <br>
+                            
+                            Our lights now could turn on any of the colors that we had specified. 
+                            We could ask our Google Home Mini to "Turn the lights red", 
+                            where 'turn the lights' represented a trigger for the following color keyword ('red'), 
+                            which IFTTT would process into Our.IP:5000/on/red. We implemented port forwarding on our router,
+                                to the Raspberry Pi, in order to control our lights from the internet. The Raspberry Pi would process this GET request, 
+                            and turn on the proper combination of R, G, and B multiplied by a value.
+                            
+                        
+                            <br>
+                            <br>
+
+                            
+                            Our final goal was to implement more features, such as flashing, breathing, and alternating between multiple colors. 
+                            In attempting to make the lights flash, we attempted to use different libraries in the hopes that they would have a built-in on-off function that used PWM when on. 
+                            However, after scouring many libraries, it seemed that there was no such functionality that would also extend to breathing and alternating colors.
+                            We ended up using pigpio to control our lights. We had to run 'sudo pigpiod' each time we restarted the RPi, but we automated this by adding this command to the boot file for the RPi.
+                            
+                            <br>
+                            <br>
+                            
+
+                            Unable to find a built in way to solve our problem, we tried a different method for flashing - running another Python program in parallel which would do the loop work: a while loop that output PWM and down time as specified. 
+                            In the main Python script, we would find the process of the other program and kill it in order to break its while loop and regain control of the pins. This method worked! 
+                            In order to find the side Python program's PID, we searched for a PPID of 1 and a program name of 'python3', which is the only possible program that the side program could be 
+                            (as the side program would be started within the python3 program running as root). From there, it was straightforward to implement flashing, breathing (increasing and decreasing the brightness according to a sine wave or another waveform), 
+                            and alternating the lights between different colors with the setting of flashing, breathing, and directly changing from one color to the next. We also gave the user control of high time and low time for all of these functions, where applicable.
+                            (Note: without killing the other program, we found, two conflicting commands to the lights seemed to occur simultaneously, which was not desired.)
+                            
+                        
+                            <br>
+                            <br>
+
+                            One of the problems we ran into with keeping our Raspberry Pi on all the time as a server, is that the Raspberry Pi would become unresponsive to server requests after about a day. 
+                            By replacing our WiFi dongle we were using with an Ethernet cable, this problem was resolved.
+                            
+                            <br>
+                            <br>
+                            
+                            To come full circle to what inspired us to do the project in the first place, we wanted to implement <i>sound mode</i>. 
+                            Currently, this mode responds to sound that the RPi picks up through a microphone, and outputs a corresponding brightness of white light according to volume. 
+                            We are in the process of working with an electret microphone and high/low/band pass filters in order to separate the sound we hear into bass, treble/alto/soprano, and presence/sparkle signals. 
+                            These signals would correspond to R, G, and B colors in sound mode.
+                            Note: We tested processing the signal from the electret microphone directly. 
+                            We used <b>Discrete Fourier Transform</b> in order to identify frequencies in our sound. 
+                            However, it seems that our Raspberry Pi cannot sample analog (using the SPI bus and an MCP3008) at a stable frequency in order to get reliable frequency identification. 
+                            With physical filters, we can measure power of the signal instead, which only requires high sampling rate and not a stable one.
+                            
                     </div>
                 </div>
             </div>
-        </section>
-        <footer class="page-footer white">
-            <div class="footer-copyright">
-                <div class="container">
-                    <span style="color:black;">&#x24B8; 2019 Apartment 401 in Berkeley</span>
-                    <span class="right contact-info" style="color:black;">Contact us at <a href="mailto:officialapartment401@gmail.com">officialapartment401@gmail.com</a></span>
-                </div>
+        </div>
+    </section>
+
+    <footer class="page-footer white">
+        <div class="footer-copyright">
+            <div class="container">
+                <span style="color:black;">&#x24B8; 2019 Apartment 401 in Berkeley</span>
+                <span class="right contact-info" style="color:black;">Contact us at <a href="mailto:officialapartment401@gmail.com">officialapartment401@gmail.com</a></span>
             </div>
-        </footer>
+        </div>
+    </footer>
+
         <!--JavaScript at end of body for optimized loading-->
         <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
