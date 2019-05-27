@@ -40,6 +40,11 @@ blockquote {
     max-width: 20%;
 }
 
+.bullet-point {
+    list-style-type: circle !important;
+    margin-left: 5%;
+}
+
 /*
 .typewriter h3 {
     color: black;
@@ -443,5 +448,9 @@ from, to { border-color: transparent }
 
     .header-space {
         margin-top: 5%;
+    }
+
+    .bullet-point {
+        margin-left: 10%;
     }
 }
