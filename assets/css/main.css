@@ -20,7 +20,7 @@ blockquote {
 }
 
 .slider .indicators .indicator-item.active {
-    background-color: #03a9f4;
+    background-color: #deecf3;
 }
 
 .header-space {
@@ -43,6 +43,24 @@ blockquote {
 .bullet-point {
     list-style-type: circle !important;
     margin-left: 5%;
+}
+
+.tabs .tab a:hover, .tabs .tab a.active {
+    background-color: transparent;
+    color: #03a9f4;
+}
+
+tabs .tab a:focus, .tabs .tab a:focus.active {
+    background-color: transparent;
+}
+  
+.tabs .indicator {
+    background-color: #03a9f4;
+    height: 5px;
+}
+
+.tabs .tab a {
+    color: black;
 }
 
 /*
