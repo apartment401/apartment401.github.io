@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <!--Our personal css file-->
+        <link rel="stylesheet" href="../assets/css/main.css">
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="icon" type="image/gif" href="../assets/images/icon.png" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <title>Apartment 401 - Color Control</title>
+    </head>
+    <body>
+      
+    <!--Navigation Bar on Desktop-->
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper white">
+                <div class="container">
+                    <a href="../index.html" class="brand-logo">
+                        <div style="height:5px"></div>
+                        <div style="height:50px">
+                            <img src="../assets/images/navbar-logo.png" style="max-width:100%; max-height:100%;">
+                        </div>
+                    </a>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons black-text">menu</i></a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a class="black-text" href="../index.html">Home</a></li>
+                        <li><a class="black-text" href="../about.html">About</a></li>
+                        <li><a class="black-text" href="../projects.html">Projects</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!--Navigation Bar on Mobile-->
+    <ul class="sidenav" id="mobile-demo">
+        <li><a class="black-text sidenav-close" href="../index.html">Home</a></li>
+        <li><a class="black-text sidenav-close" href="../about.html">About</a></li>
+        <li><a class="black-text sidenav-close" href="../projects.html">Projects</a></li>
+    </ul>
+
+    <div class="preloader-background">
+        <div class="preloader">
+            <div style="color: #03a9f4" class="la-pacman la-3x">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="container">
+        <h2>Color Control</h2>
+    </section>
+
+    <section class="container">
+        <div class="slider">
+            <ul class="slides">
+                <li>
+                    <img src="../assets/images/colorcontrol.jpg"> <!-- random image -->
+                </li>
+                <li>
+                    <img src="../assets/images/colorcontrolelectrical.jpg"> <!-- random image -->
+                </li>
+            </ul>
+        </div>
+    <br>
+    </section>
+
+    <section class="container">
+        <div class="row">
+            <div class="col s12 m12">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title"><b><i class="fas fa-info-circle left"></i>Overview</b></span>
+                        <p class="black-text">
+                            reSEEt was developed as a project for Stanford's TreeHacks in February 2019. Our team wanted to target the student population and other populations which
+                            split receipts between groups of people. The idea was to have an app which would scan receipts, use computer vision software to identify what was on the receipt, and
+                            then allow members to claim shares of items. This would be an app which would integrate into money requesting apps such as Venmo, Square Cash, and PayPal.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12 m12">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title"><b><i class="fas fa-trophy left"></i>Goal</b></span>
+                        <p class="black-text">
+                            Our TreeHacks team wanted to create an easy-to-use receipt scanning and cost splitting app.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+        <div class="row">
+            <div class="col s12 m12">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title"><b><i class="fas fa-lightbulb left"></i>Solution</b></span>
+                        <p class="black-tex"t>
+                            We used Google's Firebase as our database for storing data, and their ml-kit for analyzing the images.
+                            We were all new to mobile app development, and so began research into what Apple and Google (Android) had to offer, eventually settling on creating an iOS app.
+                            <br>
+                            <br>
+                            We immediately ran into many challenges with scanning receipts. The first was image quality, and the second was the format of receipts.
+
+                            In order to use the text-recognition service offered by Google, we first needed to take quality images or preprocess images for easier text recognition.
+
+                            To address the issue of receipt format, we ultimately decided upon using a ML caterization system which would first detect the type of receipt being scanned and the format associated with the receipt. We could then parse the data
+                            and throw out unnecessary paramters in the receipt such as item ID, and keep necessary pieces of information, such as the item name and price.
+                            
+                            <br>
+                            <br> 
+                            
+                            Our team ultimately spent a large portion of our time learning how to use the libraries and protocols that Firebase ML and Swift had to offer. We developed a simple version of the app and demoed it. Unfortunately, our team did not take home 
+                            any prizes, though the experience was a blast.
+
+                            <br><br>
+                            Here's a simplified transcript of one of our conversations concerning the output of the ML scan of the image from Firebase's ml-kit text detection, 
+                            and how we would allow a user to click on a price on the receipt to add person to split it with:
+                            <blockquote>
+                                The only data available is the string [detected] itself and the coordinate of that specific string.  
+                                [The] same characters have the exact description name within the file and location and arrangements of the order of the strings are random. 
+                                <br>
+                                We need code that processes a touch and have an inbound range [area of detection so that the tap doesn't need to be too precise] of the pixel count that selects the value we want. 
+                                The values [pixel values for clicking on the screen] should be a premade list that list out the money values in sequence as the receipt shows. 
+                                The new pixel value of the created string, ex. 1.89 should have the coordinate of the average coordinate of the characters that make up that string. 
+                                The premade list may have to be a hashmap.
+                            </blockquote>
+                        
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="page-footer white">
+        <div class="footer-copyright">
+            <div class="container">
+                <span style="color:black;">&#x24B8; 2020 Apartment 401 in Berkeley</span>
+                <span class="right contact-info" style="color:black;">Contact us at <a href="mailto:officialapartment401@gmail.com">officialapartment401@gmail.com</a></span>
+            </div>
+        </div>
+    </footer>
+
+        <!--JavaScript at end of body for optimized loading-->
+        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="../assets/js/main.js"></script>
+    </body>
+</html>
