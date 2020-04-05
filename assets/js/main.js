@@ -1,3 +1,4 @@
+// Removes the loading screen after 1500 ms, and supports smooth scrolling on click
 $(document).ready(function(){
     $('.preloader').delay(1000).fadeOut('fast');
     $('.preloader-background').delay(1500).fadeOut('slow');
