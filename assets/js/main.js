@@ -21,3 +21,34 @@ $(document).ready(function(){
         }
     });
 });
+
+<!-- The core Firebase JS SDK is always required and 
+must be listed first -->
+<script 
+src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you 
+want to use
+     
+https://firebase.google.com/docs/web/setup#available-libraries 
+-->
+<script 
+src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDlrMFCuGC5Uut-DtJbrG6GzAlGP1Y7xc8",
+    authDomain: "testtaker-a.firebaseapp.com",
+    databaseURL: "https://testtaker-a.firebaseio.com",
+    projectId: "testtaker-a",
+    storageBucket: "testtaker-a.appspot.com",
+    messagingSenderId: "877261584283",
+    appId: 
+"1:877261584283:web:f230ad13f003fcec39133e",
+    measurementId: "G-NX8Q4RWVBX"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
