@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--Our personal css file-->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" type="image/gif" href="../assets/images/icon.png"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+          integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <title>Apartment 401 - Alexa Skill Tree</title>
+</head>
+<body>
+
+<!--Navigation Bar on Desktop-->
+<div class="navbar-fixed">
+    <nav>
+        <div class="nav-wrapper white">
+            <div class="container">
+                <a href="../index.html" class="brand-logo">
+                    <div style="height:5px"></div>
+                    <div style="height:50px">
+                        <img src="../assets/images/navbar-logo.png" style="max-width:100%; max-height:100%;" alt="navbar-logo">
+                    </div>
+                </a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i
+                        class="material-icons black-text">menu</i></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a class="black-text" href="../index.html">Home</a></li>
+                    <li><a class="black-text" href="../about.html">About</a></li>
+                    <li><a class="black-text" href="../projects.html">Projects</a></li>
+                    <li><a class="black-text" href="../blog.html">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<!--Navigation Bar on Mobile-->
+<ul class="sidenav" id="mobile-demo">
+    <li><a class="black-text sidenav-close" href="../index.html">Home</a></li>
+    <li><a class="black-text sidenav-close" href="../about.html">About</a></li>
+    <li><a class="black-text sidenav-close" href="../projects.html">Projects</a></li>
+    <li><a class="black-text" href="../blog.html">Blog</a></li>
+</ul>
+
+<div class="preloader-background">
+    <div class="preloader">
+        <div style="color: #03a9f4" class="la-pacman la-3x">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div>
+
+
+<section class="container">
+    <h2>Alexa Skill Tree</h2>
+</section>
+
+<!--<section class="container">-->
+<!--    <div class="slider">-->
+<!--        <ul class="slides">-->
+<!--            <li>-->
+<!--                <img src="../assets/images/colorcontrol.jpg" alt="colorcontrol.jpg"> &lt;!&ndash; random image &ndash;&gt;-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <img src="../assets/images/colorcontrolelectrical.jpg" alt="colorcontrolelectrical.jpg"> &lt;!&ndash; random image &ndash;&gt;-->
+<!--            </li>-->
+<!--        </ul>-->
+<!--    </div>-->
+<!--    <br>-->
+<!--</section>-->
+
+<section class="container">
+    <div class="row">
+        <div class="col s12 m12">
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-title"><b><i class="fas fa-info-circle left"></i>Overview</b></span>
+                    <p class="black-text">
+                        The Alexa Skill Tree project was a game developed while three members of Apartment 401 interned
+                        at Amazon. Alexa Skill Tree was submitted to the Amazon Interns Hackathon in Summer 2020 and was
+                        built by Warren Gu, Felix Lin, and Paul Ngo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12 m12">
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-title"><b><i class="fas fa-trophy left"></i>Goal</b></span>
+                    <p class="black-text">
+                        We wanted to create a gamified conversation with Alexa to provide an onboarding experience for
+                        future Amazon interns.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col s12 m12">
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-title"><b><i class="fas fa-lightbulb left"></i>Solution</b></span>
+                    <p class="black-text">
+                        We did research in order to identify what interns thought about the current onboarding process.
+                        In particular, we aimed to identify things interns liked and pain points interns had with the
+                        current onboarding process. Our goal was to use these insights to develop ideas for what would
+                        be most helpful to interns in a pre-onboarding experience.
+                    </p>
+
+                    <p class="black-text">
+                        Some key points we found were that:
+                    </p>
+                    <ol>
+                        <li>
+                            The Embark onboarding experience seemed lengthy and monotonous at some points to a few interns.
+                        </li>
+                        <li>
+                            Many found that they needed additional support during onboarding to track their IT equipment and troubleshoot IT issues
+                        </li>
+                        <li>
+                            Some interns expressed interest in learning more about Amazon and their specific teams prior to beginning the internship.
+                        </li>
+                    </ol>
+
+                    <p class="black-text">
+                        Looking at the key insights we arrived at, we were able to narrow down the scope of our project
+                        to one primary focus: How might we build an Alexa Skill to create an engaging experience that
+                        would introduce new interns to Amazon and their place within Amazon, while also providing them
+                        adequate support to begin their internship successfully?
+                        <br>
+                        Because of Alexa's nature as a primarily voice based application, we did not want to create an
+                        extensive mobile application interface for this Alexa Skill and instead just focus on its
+                        voice-related capabilities. We felt that would take away from the identity of this
+                        pre-onboarding experience as an Alexa Skill and instead turn it into something more like an
+                        Amazon pre-onboarding app.
+                    </p>
+
+                    <p class="black-text">
+                        We created an Alexa skill using the Alexa Developer Console, and developed a skill tree which
+                        users of the skill could navigate by reading material and answering questions.
+                        <br><br>
+                        Our skill tree:
+                    </p>
+                    <img src="../assets/images/alexa_skill_tree.png" class="responsive-img" alt="alexa_skill_tree.png">
+
+                    Overall, we enjoyed having the opportunity to translate our time here at Amazon into a project
+                    which supports the intern experience for future Amazonians.
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="page-footer white">
+    <div class="footer-copyright">
+        <div class="container">
+            <span style="color:black;">&#x24B8; 2020 Apartment 401 in Berkeley</span>
+            <span class="right contact-info" style="color:black;">Contact us at <a
+                    href="mailto:officialapartment401@gmail.com">officialapartment401@gmail.com</a></span>
+        </div>
+    </div>
+</footer>
+
+<!--JavaScript at end of body for optimized loading-->
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+<!-- TODO: Add SDKs for Firebase products that we want to use
+https://firebase.google.com/docs/web/setup#available-libraries
+-->
+<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-firestore.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
